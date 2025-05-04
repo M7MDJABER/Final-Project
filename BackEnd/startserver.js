@@ -26,7 +26,7 @@ app.use(session({
   }));
 
 app.use(cors({
-  origin:["https://darisni.netlify.app"],
+  origin:["https://darisnii.netlify.app"],
   methods:["POST","GET"],
   credentials: true
 }));

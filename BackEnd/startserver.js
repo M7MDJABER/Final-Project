@@ -32,7 +32,7 @@ app.use(session({
 
 
 app.use(cors({
-  origin: ["https://darisnii.netlify.app", "http://localhost:3000"],
+  origin: ["https://darisnii.netlify.app"],
   methods: ["POST", "GET"],
   credentials: true
 }));

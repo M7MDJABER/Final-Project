@@ -1,0 +1,135 @@
+/* mycourses.css */
+
+.mycourses-cont {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+  }
+  
+  .mycourses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  /* ستايل كارت الكورس الأساسي */
+  .course-card {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 0;
+    height: 200px;
+    position: relative;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* بلوك اللون العشوائي */
+  .color-block {
+    height: 120px;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: 0.3s;
+  }
+  
+  /* زر إضافة كورس جديد */
+  .add-course {
+    background: #f5f5f5;
+    border: 2px dashed #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .add-course:hover {
+    border-color: #999999;
+  }
+  
+  .plus-icon {
+    font-size: 3rem;
+    color: #666666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* عناصر التحكم (النقاط الثلاث) */
+  .course-header {
+    position: absolute;
+    top: 125px;
+    right: 10px;
+    z-index: 2;
+  }
+  
+  .options-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 4px;
+    height: 4px;
+    background: #666666;
+    border-radius: 50%;
+  }
+  
+  /* قائمة الخيارات */
+  .options-menu {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    min-width: 120px;
+  }
+  
+  .menu-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    text-align: right;
+    cursor: pointer;
+    color: #333;
+    font-size: 0.9rem;
+  }
+  
+  .menu-item:hover {
+    background: #f8f9fa;
+  }
+  
+  /* عنوان الكورس */
+  .course-title {
+    margin: 0;
+    padding: 0 1rem 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    color: #333333;
+    font-size: 1.1rem;
+    line-height: 1.4;
+  }

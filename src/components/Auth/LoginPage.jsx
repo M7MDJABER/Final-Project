@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import React, { useState , useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
@@ -22,7 +21,7 @@ const LogInPage = () => {
     setMessage("");
     
     try {
-      const res = await axios.post("http://localhost:5000/log_in", formData, {
+      const res = await axios.post("https://graduation-project-c7pi.onrender.com/log_in", formData, {
         headers: { "Content-Type": "application/json" },
       });
   
@@ -34,7 +33,7 @@ const LogInPage = () => {
         localStorage.setItem("user", JSON.stringify(res.data.user));
   
         // إرسال الطلب بعد تسجيل الدخول مع الـ credentials
-        const coursesRes = await axios.get("http://localhost:5000/getCourses", {
+        const coursesRes = await axios.get("https://graduation-project-c7pi.onrender.com/getCourses", {
           withCredentials: true
         });
   

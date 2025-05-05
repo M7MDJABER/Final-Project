@@ -8,7 +8,7 @@ router.use(session({
   cookie:{secure:false}
 }));
 
-router.post("/logout", (req, res) => {
+router.post("/log_out", (req, res) => {
     // Clear the token cookie
     req.session.destroy(err => {
       if (err) {

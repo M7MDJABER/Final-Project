@@ -6,10 +6,6 @@ const textract = require("textract");
 const path = require("path");
 const app = express();
 
-app.use(cors({
-  origin: "http://localhost:3000",
-  credentials: true
-}));
 
 const textExtract = async (filePath) => {
   let fileExt = path.extname(filePath).toLowerCase();

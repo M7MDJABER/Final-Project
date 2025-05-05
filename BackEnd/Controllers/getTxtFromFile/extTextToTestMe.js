@@ -18,7 +18,7 @@ async function getfilepath(fileUrl) {
   try {
     const parsedUrl = new URL(fileUrl);
     const filename = path.basename(parsedUrl.pathname);
-    const tempDir = path.join(__dirname, "..", "..", "..", "BackEnd", "Controllers", "getTxtFromFile", "TempDonwloadForTestMe");
+    const tempDir = path.join(__dirname, "..", "..", "..", "BackEnd", "Controllers", "getTxtFromFile", "tmp");
     const filePath = path.join(tempDir, filename);
 
     await fs.ensureDir(tempDir); 
@@ -49,7 +49,7 @@ function makeoutputpath(filePath){
   const basename = path.basename(filePath,path.extname(filePath));
   const outputDir = path.join(
     __dirname,
-     "..", "..", "..", "BackEnd", "Controllers", "getTxtFromFile", "office2pdf"
+     "..", "..", "..", "BackEnd", "Controllers", "getTxtFromFile", "tmp"
   )
   return path.join(outputDir,`${basename}.pdf`);
 }

@@ -8,6 +8,7 @@ import HowToUse from './components/HowToUse/HowToUse';
 import Reviews from './components/Reviews/Reviews';
 import LoginPage from './components/Auth/LoginPage';
 import SignUpPage from './components/Auth/SignUpPage';
+import UserProfile from './components/Auth/UserProfile';
 import MyCourses from './components/MyCourses/mycourses';
 import FileUploadForm from './components/MyCourses/addcourse';
 import QuizMaker from './components/quizMaker/quizmaker';
@@ -81,6 +82,7 @@ function App() {
           {/* Private Routes */}
           {auth ? (
             <>
+              <Route path="/UserProfile" element={<UserProfile />} />
               <Route path="/MyCourses" element={<MyCourses />} />
               <Route path="/addCourse" element={<FileUploadForm />} />
               <Route path="/QuizMaker" element={<QuizMaker />} />

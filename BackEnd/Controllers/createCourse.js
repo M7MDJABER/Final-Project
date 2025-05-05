@@ -15,10 +15,10 @@ router.use(session({
 
 const storage = multer.diskStorage({
     destination: function (req,file,cb){
-        cb(null,"tmp/");
+        cb(null,"/tmp/");
     },
     filename : function (req,file,cb){
-        const uniquename = Date.now().toString();
+        const uniquename = Date.now().toString()+"("+nameOnly+")";
         const fileExt = path.extname(file.originalname);
         cb(null,uniquename+fileExt);
     }

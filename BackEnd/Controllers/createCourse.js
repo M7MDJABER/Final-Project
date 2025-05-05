@@ -18,6 +18,7 @@ const storage = multer.diskStorage({
         cb(null,"/tmp/");
     },
     filename : function (req,file,cb){
+        const nameOnly = path.parse(original).name;
         const uniquename = Date.now().toString()+"("+nameOnly+")";
         const fileExt = path.extname(file.originalname);
         cb(null,uniquename+fileExt);

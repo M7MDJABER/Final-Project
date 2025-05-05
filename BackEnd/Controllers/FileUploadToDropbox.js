@@ -9,7 +9,7 @@ const { createClient } = require("@supabase/supabase-js");
 const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 const dpx = new Dropbox.Dropbox({ accessToken: process.env.DPX_TOKEN, fetch: fetch });
 
-const TMP_DIR = "/tmp";
+const TMP_DIR = "/tmp/";
 fs.ensureDirSync(TMP_DIR); // Ensure /tmp exists
 
 const router = express();
